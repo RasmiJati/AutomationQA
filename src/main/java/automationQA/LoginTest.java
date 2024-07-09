@@ -14,6 +14,15 @@ public class LoginTest {
 	WebDriver driver;
 	String baseUrl = "https://practicetestautomation.com/practice-test-login/";
 
+	/*
+	 * How to verify login passed: 
+	 	* By CSS ID: find_element_by_id By CSS class name: find_element_by_class_name
+	 	* By name attribute: find_element_by_name By DOM structure or Xpath:
+	 	* find_element_by_xpath by tagName: find_element_by_tag_name() By link text:
+	 	* find_element_by_link_text By partial link text:
+	 	* find_element_by_partial_link_text By HTML tag name: find_element_by_tag_name
+	 */
+
 	@Test(enabled = false)
 	public void verifyValidaLogin() {
 
@@ -57,7 +66,7 @@ public class LoginTest {
 		Assert.assertEquals(actualValue, "Your username is invalid!");
 
 	}
-	
+
 	@Test(enabled = true)
 	public void verifyInvalidPassword() throws InterruptedException {
 		driver = new ChromeDriver();
@@ -66,7 +75,7 @@ public class LoginTest {
 
 		WebElement username = driver.findElement(By.id("username"));
 		username.sendKeys("student");
-		
+
 		Thread.sleep(2000);
 		WebElement password = driver.findElement(By.id("password"));
 		password.sendKeys("abcd");
