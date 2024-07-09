@@ -41,7 +41,7 @@ public class LoginTest {
 	}
 
 	@Test(enabled = true)
-	public void verifyInvalidEmail() {
+	public void verifyInvalidUserName() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(baseUrl);
