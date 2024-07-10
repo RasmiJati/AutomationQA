@@ -15,8 +15,8 @@ public class SignUpTest {
 	String baseUrl = "file:///D:/QA/course/eclipse_project/automationQA/src/main/java/automationQA/FormExercise.html";
 
 	// valid email and password
-	@Test(enabled = false)
-	public void verifyValidRegister() throws InterruptedException {
+	@Test(enabled = true)
+	public void registerAndlogin() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(baseUrl);
@@ -47,6 +47,29 @@ public class SignUpTest {
 		String actualResult = showData.getText();
 		Assert.assertEquals(actualResult,
 				"Name: signuptest\n" + "Email: signuptest@gmail.com\n" + "Password: qwertyuiop");
+
+		WebElement loginLink = driver.findElement(By.id("login-link"));
+		loginLink.click();
+
+		Thread.sleep(2000);
+		WebElement loginEmail = driver.findElement(By.id("login-email"));
+		loginEmail.sendKeys("signuptest@gmail.com");
+
+		Thread.sleep(1000);
+		WebElement loginPassword = driver.findElement(By.id("login-password"));
+		loginPassword.sendKeys("qwertyuiop");
+
+		WebElement login = driver.findElement(By.id("login-btn"));
+		login.click();
+
+		WebElement successMessage = driver.findElement(By.id("login-success-message"));
+		String actualMessage = successMessage.getText();
+		Assert.assertEquals(actualMessage, "Login successful");
+
+		WebElement displayMessage = driver.findElement(By.id("login-display-values"));
+		String actualDisplayMessage = displayMessage.getText();
+		Assert.assertEquals(actualDisplayMessage, "Email: signuptest@gmail.com");
+
 	}
 
 	// invalid email and valid password
@@ -78,8 +101,7 @@ public class SignUpTest {
 	}
 
 	// invalid password and valid email
-
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void invalidPassword() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -105,7 +127,7 @@ public class SignUpTest {
 		Assert.assertEquals(actualMsg, "Password must be at least 8 characters long");
 	}
 
-	// Password donot match
+	// Password do not match
 	@Test(enabled = false)
 	public void unmatchedPasswordAndConfirmpassword() throws InterruptedException {
 		driver = new ChromeDriver();
