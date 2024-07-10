@@ -24,7 +24,7 @@ public class LoginTest {
 	 */
 
 	@Test(enabled = false)
-	public void verifyValidaLogin() {
+	public void verifyValidLogin() throws InterruptedException {
 
 //		initalize browser / open browser
 		driver = new ChromeDriver();
@@ -39,6 +39,7 @@ public class LoginTest {
 		WebElement username = driver.findElement(By.id("username"));
 		username.sendKeys("student");
 
+		Thread.sleep(2000);
 		WebElement password = driver.findElement(By.id("password"));
 		password.sendKeys("Password123"); // put data to the input field of password in login form
 
@@ -49,6 +50,8 @@ public class LoginTest {
 		Assert.assertEquals(actualResult, "Test Login | Practice Test Automation");
 	}
 
+	
+	//Invalid username
 	@Test(enabled = true)
 	public void verifyInvalidUserName() {
 		driver = new ChromeDriver();
@@ -67,6 +70,8 @@ public class LoginTest {
 
 	}
 
+	
+//	valid username and invalid password
 	@Test(enabled = true)
 	public void verifyInvalidPassword() throws InterruptedException {
 		driver = new ChromeDriver();
