@@ -9,7 +9,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-public class SignUpTest {
+public class SignUpAndLoginTest {
 
 	WebDriver driver;
 	String baseUrl = "file:///D:/QA/course/eclipse_project/automationQA/src/main/java/automationQA/FormExercise.html";
