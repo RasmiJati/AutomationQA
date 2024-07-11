@@ -12,10 +12,11 @@ import org.testng.annotations.Test;
 public class SignUpAndLoginTest {
 
 	WebDriver driver;
-	String baseUrl = "file:///D:/QA/course/eclipse_project/automationQA/src/main/java/automationQA/FormExercise.html";
+	String baseUrl = "file:///D:/QA/course/eclipse_project/automationQA/src/main/java/LoginAndSignUpWithRegisteredUser/FormExercise.html";
+	String strEmail = "signuptest@gmail.com";
 
 	// valid email and password
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void registerAndlogin() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -25,7 +26,7 @@ public class SignUpAndLoginTest {
 		name.sendKeys("signuptest");
 
 		WebElement email = driver.findElement(By.id("email"));
-		email.sendKeys("signuptest@gmail.com");
+		email.sendKeys(strEmail);
 
 		Thread.sleep(1000);
 		WebElement password = driver.findElement(By.id("password"));
@@ -53,7 +54,7 @@ public class SignUpAndLoginTest {
 
 		Thread.sleep(2000);
 		WebElement loginEmail = driver.findElement(By.id("login-email"));
-		loginEmail.sendKeys("signuptest@gmail.com");
+		loginEmail.sendKeys(strEmail);
 
 		Thread.sleep(1000);
 		WebElement loginPassword = driver.findElement(By.id("login-password"));
@@ -72,7 +73,7 @@ public class SignUpAndLoginTest {
 
 	}
 
-	// invalid email and valid password
+	// invalid email and valid password --> sign up
 	@Test(enabled = false)
 	public void InvalidEmail() throws InterruptedException {
 		driver = new ChromeDriver();
@@ -100,7 +101,7 @@ public class SignUpAndLoginTest {
 
 	}
 
-	// invalid password and valid email
+	// invalid password and valid email --> sign up
 	@Test(enabled = false)
 	public void invalidPassword() throws InterruptedException {
 		driver = new ChromeDriver();
@@ -108,7 +109,7 @@ public class SignUpAndLoginTest {
 		driver.get(baseUrl);
 
 		WebElement email = driver.findElement(By.id("email"));
-		email.sendKeys("signuptest@gmail.com");
+		email.sendKeys();
 
 		Thread.sleep(1000);
 		WebElement password = driver.findElement(By.id("password"));
@@ -127,7 +128,7 @@ public class SignUpAndLoginTest {
 		Assert.assertEquals(actualMsg, "Password must be at least 8 characters long");
 	}
 
-	// Password do not match
+	// Password do not match --> sign up
 	@Test(enabled = false)
 	public void unmatchedPasswordAndConfirmpassword() throws InterruptedException {
 		driver = new ChromeDriver();
@@ -135,7 +136,7 @@ public class SignUpAndLoginTest {
 		driver.get(baseUrl);
 
 		WebElement email = driver.findElement(By.id("email"));
-		email.sendKeys("signuptest@gmail.com");
+		email.sendKeys(strEmail);
 
 		Thread.sleep(1000);
 		WebElement password = driver.findElement(By.id("password"));
@@ -152,6 +153,114 @@ public class SignUpAndLoginTest {
 		WebElement errorMsg = driver.findElement(By.id("password-match-error"));
 		String actualMsg = errorMsg.getText();
 		Assert.assertEquals(actualMsg, "Passwords do not match");
+	}
+
+	// login email validate
+
+	@Test(enabled = false)
+	public void verifyInvalidLoginEmail() throws InterruptedException {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(baseUrl);
+
+		WebElement name = driver.findElement(By.id("name"));
+		name.sendKeys("signuptest");
+
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys(strEmail);
+
+		Thread.sleep(1000);
+		WebElement password = driver.findElement(By.id("password"));
+		password.sendKeys("qwertyuiop");
+
+		Thread.sleep(1000);
+		WebElement confirmPassword = driver.findElement(By.id("confirm-password"));
+		confirmPassword.sendKeys("qwertyuiop");
+
+		Thread.sleep(1000);
+		WebElement register = driver.findElement(By.id("register-btn"));
+		register.click();
+
+		WebElement message = driver.findElement(By.id("success-message"));
+		String actualValue = message.getText();
+		Assert.assertEquals(actualValue, "Registration successful");
+
+		WebElement showData = driver.findElement(By.id("display-values"));
+		String actualResult = showData.getText();
+		Assert.assertEquals(actualResult,
+				"Name: signuptest\n" + "Email: signuptest@gmail.com\n" + "Password: qwertyuiop");
+
+		WebElement loginLink = driver.findElement(By.id("login-link"));
+		loginLink.click();
+
+		WebElement loginEmail = driver.findElement(By.id("login-email"));
+		loginEmail.sendKeys("abcd");
+
+		Thread.sleep(1000);
+		WebElement loginPassword = driver.findElement(By.id("login-password"));
+		loginPassword.sendKeys("qwertyuiop");
+
+		WebElement loginBtn = driver.findElement(By.id("login-btn"));
+		loginBtn.click();
+
+		WebElement loginError = driver.findElement(By.id("login-email-error"));
+		String actualMsg = loginError.getText();
+		Assert.assertEquals(actualMsg, "Email not registered");
+
+	}
+
+	// login password validate
+
+	@Test(enabled = true)
+	public void verifyInvalidLoginPassword() throws InterruptedException {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(baseUrl);
+
+		WebElement name = driver.findElement(By.id("name"));
+		name.sendKeys("signuptest");
+
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys(strEmail);
+
+		Thread.sleep(1000);
+		WebElement password = driver.findElement(By.id("password"));
+		password.sendKeys("qwertyuiop");
+
+		Thread.sleep(1000);
+		WebElement confirmPassword = driver.findElement(By.id("confirm-password"));
+		confirmPassword.sendKeys("qwertyuiop");
+
+		Thread.sleep(1000);
+		WebElement register = driver.findElement(By.id("register-btn"));
+		register.click();
+
+		WebElement message = driver.findElement(By.id("success-message"));
+		String actualValue = message.getText();
+		Assert.assertEquals(actualValue, "Registration successful");
+
+		WebElement showData = driver.findElement(By.id("display-values"));
+		String actualResult = showData.getText();
+		Assert.assertEquals(actualResult,
+				"Name: signuptest\n" + "Email: signuptest@gmail.com\n" + "Password: qwertyuiop");
+
+		WebElement loginLink = driver.findElement(By.id("login-link"));
+		loginLink.click();
+
+		WebElement loginEmail = driver.findElement(By.id("login-email"));
+		loginEmail.sendKeys(strEmail);
+
+		Thread.sleep(1000);
+		WebElement loginPassword = driver.findElement(By.id("login-password"));
+		loginPassword.sendKeys("absg");
+
+		WebElement loginBtn = driver.findElement(By.id("login-btn"));
+		loginBtn.click();
+
+		WebElement loginError = driver.findElement(By.id("login-password-error"));
+		String actualMsg = loginError.getText();
+		Assert.assertEquals(actualMsg, "Incorrect password");
+
 	}
 
 	@AfterMethod
