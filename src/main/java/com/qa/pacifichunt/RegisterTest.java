@@ -21,6 +21,8 @@ public class RegisterTest {
 	String strEmail = "test@gmail.com";
 	String strPassword = "qwertyuioP@123";
 
+	// Jobseeker
+
 	@Test
 	@Ignore
 	public void signUpJobSeekerTest() throws InterruptedException {
@@ -67,6 +69,8 @@ public class RegisterTest {
 
 	}
 
+	// Employer
+
 	@Test(enabled = true)
 	public void signUpEmployerTest() throws InterruptedException {
 		driver = new ChromeDriver();
@@ -77,7 +81,7 @@ public class RegisterTest {
 
 		driver.get(baseUrl);
 
-		String strEmail = "teioist@gmail.com";
+		String strEmail = "tester65d98t@gmail.com";
 
 		// explicit wait
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -93,40 +97,40 @@ public class RegisterTest {
 		representativeName.sendKeys("owner");
 
 		WebElement representativeEmail = driver.findElement(By.name("owner_email"));
-		representativeEmail.sendKeys(strEmail);
+		representativeEmail.sendKeys("abcdef123@gmail.com");
 
 		WebElement companyName = driver.findElement(By.name("company_name"));
-		companyName.sendKeys("company1");
+		companyName.sendKeys("company2");
 
 		WebElement companyEmail = driver.findElement(By.name("email"));
-		companyEmail.sendKeys("company@gmail.com");
+		companyEmail.sendKeys("abcdef123@gmail.com");
 
 		// drop down
 		WebElement selectCompanyType = driver.findElement(By.cssSelector("div[role='combobox']"));
 		selectCompanyType.click();
 		List<WebElement> companyTypeList = driver.findElements(By.xpath("//ul/li"));
 		for (WebElement companyList : companyTypeList) {
-			System.out.println(companyList.getText()); // optional use if only have powerful laptop cause it can cause laptop to slow
 			String selectCompanyList = companyList.getText();
 			if (selectCompanyList.equals("IT"))
 				companyList.click();
 		}
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("PhoneInputCountry"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("PhoneInputCountry"))).click();
+
 		// country code drop down
-		WebElement countryCode = driver.findElement(By.className("PhoneInputCountry"));
-		countryCode.click();
+
 		List<WebElement> listOfCountryCodes = driver.findElements(By.xpath("//select/option"));
 		for (WebElement countryCodeList : listOfCountryCodes) {
+
 			String countryCodes = countryCodeList.getText();
 			if (countryCodes.equals("Nepal"))
-				countryCode.click();
+				countryCodeList.click();
 
 		}
 
 		WebElement phoneNumber = driver.findElement(By.xpath("//input[@type= 'tel']"));
-		phoneNumber.sendKeys("444033305");
+		phoneNumber.sendKeys("9841528585");
 
 		WebElement password = driver.findElement(By.name("password"));
 		password.sendKeys(strPassword);
@@ -139,13 +143,6 @@ public class RegisterTest {
 
 		WebElement submitForm = driver.findElement(By.xpath("//button[@type='submit']"));
 		submitForm.click();
-
-		WebElement verifyEmail = driver.findElement(By.xpath("//input[@type='email']"));
-		verifyEmail.sendKeys(strEmail);
-
-		WebElement nextBtn = driver.findElement(By.xpath("//button[text()='Next']"));
-		nextBtn.click();
-
 	}
 
 	@AfterMethod
