@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Test Completed]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-07-16T15:13:16 NPT" name="Default suite" finished-at="2024-07-16T15:13:25 NPT" duration-ms="9270">
+  <suite started-at="2024-07-16T15:19:39 NPT" name="Default suite" finished-at="2024-07-16T15:20:01 NPT" duration-ms="22153">
     <groups>
     </groups>
-    <test started-at="2024-07-16T15:13:16 NPT" name="Default test" finished-at="2024-07-16T15:13:25 NPT" duration-ms="9270">
+    <test started-at="2024-07-16T15:19:39 NPT" name="Default test" finished-at="2024-07-16T15:20:01 NPT" duration-ms="22153">
       <class name="automationQA.ActionTest">
-        <test-method signature="hoveronAccountTest()[pri:0, instance:automationQA.ActionTest@3cebbb30]" started-at="2024-07-16T15:13:16 NPT" name="hoveronAccountTest" finished-at="2024-07-16T15:13:23 NPT" duration-ms="7410" status="PASS">
+        <test-method signature="hoverOnSigninTest()[pri:0, instance:automationQA.ActionTest@12aba8be]" started-at="2024-07-16T15:19:39 NPT" name="hoverOnSigninTest" finished-at="2024-07-16T15:20:01 NPT" duration-ms="21428" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hoveronAccountTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.ActionTest@3cebbb30]" started-at="2024-07-16T15:13:23 NPT" name="closeBrowser" finished-at="2024-07-16T15:13:25 NPT" duration-ms="1805" status="PASS">
+        </test-method> <!-- hoverOnSigninTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.ActionTest@12aba8be]" started-at="2024-07-16T15:20:01 NPT" name="closeBrowser" finished-at="2024-07-16T15:20:01 NPT" duration-ms="683" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Completed]]>

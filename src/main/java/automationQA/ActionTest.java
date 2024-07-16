@@ -17,19 +17,41 @@ import org.testng.annotations.Test;
 public class ActionTest {
 
 	WebDriver driver;
+	String baseUrl = "https://www.nepal.ubuy.com/en";
 
-	@Test
+	@Test(enabled = false)
 	public void hoveronAccountTest() throws InterruptedException {
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://www.nepal.ubuy.com/en");
+		driver.get(baseUrl);
 
 		WebElement account = driver.findElement(By.xpath("(//span[.='Account'])[2]"));
 
 		Actions action = new Actions(driver);
-		action.moveToElement(account).build().perform();  //hover the element
+		action.moveToElement(account).build().perform(); // hover the element
+
+		Thread.sleep(3000);
+
+	}
+
+	@Test(enabled = true)
+	public void hoverOnSigninTest() throws InterruptedException {
+
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get(baseUrl);
+
+		WebElement account = driver.findElement(By.xpath("(//span[.='Account'])[2]"));
+
+		Actions action = new Actions(driver);
+		action.moveToElement(account).build().perform(); // hover on Account
+		Thread.sleep(3000);
+
+		WebElement signin = driver.findElement(By.xpath("//li[.='Sign in']"));
+		action.moveToElement(signin).build().perform(); // hover on Sign in
 
 		Thread.sleep(3000);
 
