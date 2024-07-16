@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class GoogleSearchTest {
 
@@ -34,7 +35,13 @@ public class GoogleSearchTest {
 
 		int count = searchList.size();
 		System.out.println("total : " + count);
+
+		Actions action = new Actions(driver);
 		System.out.println(searchList.get(count - 6).getText());
+
+		action.moveToElement(searchList.get(count - 6));
+		Thread.sleep(3000);
+
 		searchList.get(count - 6).click();
 	}
 

@@ -81,8 +81,6 @@ public class RegisterTest {
 
 		driver.get(baseUrl);
 
-		String strEmail = "tester65d98t@gmail.com";
-
 		// explicit wait
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Sign up']"))).click();
