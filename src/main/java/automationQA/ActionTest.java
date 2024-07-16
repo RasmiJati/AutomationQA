@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -17,7 +19,7 @@ public class ActionTest {
 	WebDriver driver;
 
 	@Test
-	public void hoverTest() throws InterruptedException {
+	public void hoveronAccountTest() throws InterruptedException {
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -27,21 +29,10 @@ public class ActionTest {
 		WebElement account = driver.findElement(By.xpath("(//span[.='Account'])[2]"));
 
 		Actions action = new Actions(driver);
-		action.moveToElement(account).build().perform();
-
-		WebElement signin = driver.findElement(By.xpath("//li[.='Sign in']"));
-		action.moveToElement(signin).contextClick().build().perform(); // right click
-
-//		 action.moveToElement(signin).click().build().perform();
+		action.moveToElement(account).build().perform();  //hover the element
 
 		Thread.sleep(3000);
 
-		// action.moveToElement(accountList).build().perform();
-		// action.contextClick(accountList).build().perform();
-		// driver.switchTo().newWindow(WindowType.TAB); //opening new tab in window
-		driver.switchTo().newWindow(WindowType.WINDOW); // opening new chrome window
-		driver.get("https://google.com");
-		Thread.sleep(2000);
 	}
 
 	@AfterMethod

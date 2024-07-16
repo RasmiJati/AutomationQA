@@ -5,23 +5,23 @@
       <![CDATA[Test Completed]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-07-16T14:04:21 NPT" name="Default suite" finished-at="2024-07-16T14:04:34 NPT" duration-ms="13424">
+  <suite started-at="2024-07-16T15:13:16 NPT" name="Default suite" finished-at="2024-07-16T15:13:25 NPT" duration-ms="9270">
     <groups>
     </groups>
-    <test started-at="2024-07-16T14:04:21 NPT" name="Default test" finished-at="2024-07-16T14:04:34 NPT" duration-ms="13424">
-      <class name="com.qa.pacifichunt.JSExecutors">
-        <test-method signature="clickPrivacyAndPolicy()[pri:0, instance:com.qa.pacifichunt.JSExecutors@12aba8be]" started-at="2024-07-16T14:04:21 NPT" name="clickPrivacyAndPolicy" finished-at="2024-07-16T14:04:33 NPT" duration-ms="12569" status="PASS">
+    <test started-at="2024-07-16T15:13:16 NPT" name="Default test" finished-at="2024-07-16T15:13:25 NPT" duration-ms="9270">
+      <class name="automationQA.ActionTest">
+        <test-method signature="hoveronAccountTest()[pri:0, instance:automationQA.ActionTest@3cebbb30]" started-at="2024-07-16T15:13:16 NPT" name="hoveronAccountTest" finished-at="2024-07-16T15:13:23 NPT" duration-ms="7410" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickPrivacyAndPolicy -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.qa.pacifichunt.JSExecutors@12aba8be]" started-at="2024-07-16T14:04:33 NPT" name="closeBrowser" finished-at="2024-07-16T14:04:34 NPT" duration-ms="802" status="PASS">
+        </test-method> <!-- hoveronAccountTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.ActionTest@3cebbb30]" started-at="2024-07-16T15:13:23 NPT" name="closeBrowser" finished-at="2024-07-16T15:13:25 NPT" duration-ms="1805" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Completed]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.qa.pacifichunt.JSExecutors -->
+      </class> <!-- automationQA.ActionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
