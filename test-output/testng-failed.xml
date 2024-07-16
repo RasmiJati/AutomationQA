@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automationQA.GoogleSearchTest">
+      <class name="alerts.AlertTest">
         <methods>
-          <include name="searchIndexingInGoogle"/>
-          <include name="closeBrowser"/>
+          <include name="alertWithTextBox"/>
         </methods>
-      </class> <!-- automationQA.GoogleSearchTest -->
+      </class> <!-- alerts.AlertTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
