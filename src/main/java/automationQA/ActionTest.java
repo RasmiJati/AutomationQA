@@ -29,8 +29,9 @@ public class ActionTest {
 		action.moveToElement(account).build().perform();
 
 		WebElement signin = driver.findElement(By.xpath("//li[.='Sign in']"));
+		action.moveToElement(signin).contextClick().build().perform(); // right click
 
-		action.moveToElement(signin).click().build().perform();
+//		 action.moveToElement(signin).click().build().perform();
 
 		Thread.sleep(3000);
 	}
