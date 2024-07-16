@@ -5,23 +5,23 @@
       <![CDATA[Test Completed]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-07-16T12:21:47 NPT" name="Default suite" finished-at="2024-07-16T12:22:02 NPT" duration-ms="14790">
+  <suite started-at="2024-07-16T12:25:16 NPT" name="Default suite" finished-at="2024-07-16T12:25:30 NPT" duration-ms="14389">
     <groups>
     </groups>
-    <test started-at="2024-07-16T12:21:47 NPT" name="Default test" finished-at="2024-07-16T12:22:02 NPT" duration-ms="14790">
-      <class name="automationQA.GoogleSearchTest">
-        <test-method signature="searchIndexingInGoogle()[pri:0, instance:automationQA.GoogleSearchTest@3cebbb30]" started-at="2024-07-16T12:21:47 NPT" name="searchIndexingInGoogle" finished-at="2024-07-16T12:22:02 NPT" duration-ms="14284" status="PASS">
+    <test started-at="2024-07-16T12:25:16 NPT" name="Default test" finished-at="2024-07-16T12:25:30 NPT" duration-ms="14389">
+      <class name="automationQA.ActionTest">
+        <test-method signature="hoverTest()[pri:0, instance:automationQA.ActionTest@3cebbb30]" started-at="2024-07-16T12:25:16 NPT" name="hoverTest" finished-at="2024-07-16T12:25:29 NPT" duration-ms="13573" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchIndexingInGoogle -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.GoogleSearchTest@3cebbb30]" started-at="2024-07-16T12:22:02 NPT" name="closeBrowser" finished-at="2024-07-16T12:22:02 NPT" duration-ms="422" status="PASS">
+        </test-method> <!-- hoverTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.ActionTest@3cebbb30]" started-at="2024-07-16T12:25:29 NPT" name="closeBrowser" finished-at="2024-07-16T12:25:30 NPT" duration-ms="750" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Completed]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- automationQA.GoogleSearchTest -->
+      </class> <!-- automationQA.ActionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

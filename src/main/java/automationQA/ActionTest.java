@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
@@ -34,6 +35,13 @@ public class ActionTest {
 //		 action.moveToElement(signin).click().build().perform();
 
 		Thread.sleep(3000);
+
+		// action.moveToElement(accountList).build().perform();
+		// action.contextClick(accountList).build().perform();
+		// driver.switchTo().newWindow(WindowType.TAB); //opening new tab in window
+		driver.switchTo().newWindow(WindowType.WINDOW); // opening new chrome window
+		driver.get("https://google.com");
+		Thread.sleep(2000);
 	}
 
 	@AfterMethod

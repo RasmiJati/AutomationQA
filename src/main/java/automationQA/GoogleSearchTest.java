@@ -40,8 +40,7 @@ public class GoogleSearchTest {
 		System.out.println(searchList.get(count - 6).getText());
 
 		action.moveToElement(searchList.get(count - 6));
-		Thread.sleep(3000);
-
+		
 		searchList.get(count - 6).click();
 	}
 
