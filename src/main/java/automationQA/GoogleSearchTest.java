@@ -39,9 +39,14 @@ public class GoogleSearchTest {
 		Actions action = new Actions(driver);
 		System.out.println(searchList.get(count - 6).getText());
 
-		action.moveToElement(searchList.get(count - 6));
-		
+		Thread.sleep(1000);
+
+		action.moveToElement(searchList.get(count - 6)).build().perform();
+		Thread.sleep(4000);
+
 		searchList.get(count - 6).click();
+		Thread.sleep(3000);
+
 	}
 
 	@AfterMethod
