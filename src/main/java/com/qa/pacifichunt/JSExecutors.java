@@ -1,6 +1,7 @@
 package com.qa.pacifichunt;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -52,11 +53,26 @@ public class JSExecutors {
 		wait.until(ExpectedConditions.elementToBeClickable(termOfService));
 		termOfService.click();
 	}
-	
+
+	@Test(enabled = true)
+	public void lastTopJob() {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get(baseUrl);
+
+		WebElement lastJob = driver.findElement(By.xpath("//a[.='Project management']"));
+		js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true)", lastJob);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.elementToBeClickable(lastJob));
+		lastJob.click();
+
+	}
 
 	@AfterMethod
 	public void closeBrowser() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Reporter.log("Test Completed", true);
 		driver.quit();
 	}
