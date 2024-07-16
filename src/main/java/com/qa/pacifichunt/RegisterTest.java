@@ -109,11 +109,17 @@ public class RegisterTest {
 		WebElement selectCompanyType = driver.findElement(By.cssSelector("div[role='combobox']"));
 		selectCompanyType.click();
 		List<WebElement> companyTypeList = driver.findElements(By.xpath("//ul/li"));
-		for (WebElement companyList : companyTypeList) {
-			String selectCompanyList = companyList.getText();
-			if (selectCompanyList.equals("IT"))
-				companyList.click();
-		}
+
+//		for (WebElement companyList : companyTypeList) {
+//			String selectCompanyList = companyList.getText();
+//			if (selectCompanyList.equals("IT"))
+//				companyList.click();
+//		}
+
+		// using indexing in less/small data/list
+
+		int count = companyTypeList.size();
+		companyTypeList.get(count - 6).click();
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("PhoneInputCountry"))).click();

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.pacifichunt.RegisterTest">
+      <class name="automationQA.GoogleSearchTest">
         <methods>
-          <include name="signUpEmployerTest"/>
+          <include name="searchIndexingInGoogle"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.qa.pacifichunt.RegisterTest -->
+      </class> <!-- automationQA.GoogleSearchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
