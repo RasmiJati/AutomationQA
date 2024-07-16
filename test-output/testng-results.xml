@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Test Completed]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-07-16T15:55:51 NPT" name="Default suite" finished-at="2024-07-16T15:56:08 NPT" duration-ms="16553">
+  <suite started-at="2024-07-16T18:01:35 NPT" name="Default suite" finished-at="2024-07-16T18:01:41 NPT" duration-ms="6187">
     <groups>
     </groups>
-    <test started-at="2024-07-16T15:55:51 NPT" name="Default test" finished-at="2024-07-16T15:56:08 NPT" duration-ms="16553">
-      <class name="automationQA.GoogleSearchTest">
-        <test-method signature="searchIndexingInGoogle()[pri:0, instance:automationQA.GoogleSearchTest@3cebbb30]" started-at="2024-07-16T15:55:51 NPT" name="searchIndexingInGoogle" finished-at="2024-07-16T15:56:06 NPT" duration-ms="14737" status="PASS">
+    <test started-at="2024-07-16T18:01:35 NPT" name="Default test" finished-at="2024-07-16T18:01:41 NPT" duration-ms="6187">
+      <class name="com.qa.pacifichunt.JSExecutors">
+        <test-method signature="clickTermsOfServices()[pri:0, instance:com.qa.pacifichunt.JSExecutors@290222c1]" started-at="2024-07-16T18:01:35 NPT" name="clickTermsOfServices" finished-at="2024-07-16T18:01:39 NPT" duration-ms="3928" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchIndexingInGoogle -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.GoogleSearchTest@3cebbb30]" started-at="2024-07-16T15:56:06 NPT" name="closeBrowser" finished-at="2024-07-16T15:56:08 NPT" duration-ms="1771" status="PASS">
+        </test-method> <!-- clickTermsOfServices -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.qa.pacifichunt.JSExecutors@290222c1]" started-at="2024-07-16T18:01:39 NPT" name="closeBrowser" finished-at="2024-07-16T18:01:41 NPT" duration-ms="2201" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Completed]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- automationQA.GoogleSearchTest -->
+      </class> <!-- com.qa.pacifichunt.JSExecutors -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
