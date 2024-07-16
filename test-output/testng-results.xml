@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Test Completed]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-07-16T15:19:39 NPT" name="Default suite" finished-at="2024-07-16T15:20:01 NPT" duration-ms="22153">
+  <suite started-at="2024-07-16T15:22:26 NPT" name="Default suite" finished-at="2024-07-16T15:22:52 NPT" duration-ms="25878">
     <groups>
     </groups>
-    <test started-at="2024-07-16T15:19:39 NPT" name="Default test" finished-at="2024-07-16T15:20:01 NPT" duration-ms="22153">
+    <test started-at="2024-07-16T15:22:26 NPT" name="Default test" finished-at="2024-07-16T15:22:52 NPT" duration-ms="25878">
       <class name="automationQA.ActionTest">
-        <test-method signature="hoverOnSigninTest()[pri:0, instance:automationQA.ActionTest@12aba8be]" started-at="2024-07-16T15:19:39 NPT" name="hoverOnSigninTest" finished-at="2024-07-16T15:20:01 NPT" duration-ms="21428" status="PASS">
+        <test-method signature="hoverAndClickOnSigninTest()[pri:0, instance:automationQA.ActionTest@290222c1]" started-at="2024-07-16T15:22:26 NPT" name="hoverAndClickOnSigninTest" finished-at="2024-07-16T15:22:50 NPT" duration-ms="24507" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hoverOnSigninTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.ActionTest@12aba8be]" started-at="2024-07-16T15:20:01 NPT" name="closeBrowser" finished-at="2024-07-16T15:20:01 NPT" duration-ms="683" status="PASS">
+        </test-method> <!-- hoverAndClickOnSigninTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.ActionTest@290222c1]" started-at="2024-07-16T15:22:50 NPT" name="closeBrowser" finished-at="2024-07-16T15:22:52 NPT" duration-ms="1329" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Completed]]>
