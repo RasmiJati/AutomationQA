@@ -69,7 +69,7 @@ public class AlertTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(baseUrl);
 
-//		driver.findElement(By.xpath("//a[text()='Alert with Textbox']")).click();
+//		driver.findElement(By.xpath("//a[text()='Alert with Textbox']")).click();    --> shortcut but not preferable 
 
 		WebElement alertTextBox = driver.findElement(By.xpath("//a[contains(.,'Alert with Textbox')]"));
 		alertTextBox.click();
