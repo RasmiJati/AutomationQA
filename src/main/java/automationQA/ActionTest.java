@@ -86,17 +86,18 @@ public class ActionTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(baseUrl);
 
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4000));
+
 		WebElement account = driver.findElement(By.xpath("(//span[.='Account'])[2]"));
 
 		Actions action = new Actions(driver);
 		action.moveToElement(account).build().perform(); // hover on Account
-		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[.='Account'])[2]")));
 
 		WebElement signin = driver.findElement(By.xpath("//li[.='Sign in']"));
 		action.moveToElement(signin).contextClick().build().perform(); // hover and right click on Sign in
 
-		Thread.sleep(3000);
-
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[.='Sign in']")));
 	}
 
 	@AfterMethod

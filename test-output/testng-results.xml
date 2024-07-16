@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Test Completed]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-07-16T15:38:32 NPT" name="Default suite" finished-at="2024-07-16T15:38:39 NPT" duration-ms="7637">
+  <suite started-at="2024-07-16T15:49:44 NPT" name="Default suite" finished-at="2024-07-16T15:49:49 NPT" duration-ms="4626">
     <groups>
     </groups>
-    <test started-at="2024-07-16T15:38:32 NPT" name="Default test" finished-at="2024-07-16T15:38:39 NPT" duration-ms="7637">
-      <class name="automationQA.BrowserWindowSwitching">
-        <test-method signature="browserWindowSwitching()[pri:0, instance:automationQA.BrowserWindowSwitching@1e1a0406]" started-at="2024-07-16T15:38:32 NPT" name="browserWindowSwitching" finished-at="2024-07-16T15:38:39 NPT" duration-ms="7322" status="PASS">
+    <test started-at="2024-07-16T15:49:44 NPT" name="Default test" finished-at="2024-07-16T15:49:49 NPT" duration-ms="4626">
+      <class name="automationQA.ActionTest">
+        <test-method signature="rightClickOnSigninTest()[pri:0, instance:automationQA.ActionTest@67f639d3]" started-at="2024-07-16T15:49:44 NPT" name="rightClickOnSigninTest" finished-at="2024-07-16T15:49:49 NPT" duration-ms="4394" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserWindowSwitching -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.BrowserWindowSwitching@1e1a0406]" started-at="2024-07-16T15:38:39 NPT" name="closeBrowser" finished-at="2024-07-16T15:38:39 NPT" duration-ms="262" status="PASS">
+        </test-method> <!-- rightClickOnSigninTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automationQA.ActionTest@67f639d3]" started-at="2024-07-16T15:49:49 NPT" name="closeBrowser" finished-at="2024-07-16T15:49:49 NPT" duration-ms="174" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Completed]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- automationQA.BrowserWindowSwitching -->
+      </class> <!-- automationQA.ActionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
