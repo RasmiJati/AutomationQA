@@ -115,14 +115,3 @@ public class LoginAsGmail {
 	}
 
 }
-
-
-//
-//iframe  --create window
-//
-//
-//switchto() --> to switch betn windows
-//driver.close --> if window does not close auto  // cllose particular windows
-//driver.quit --> close entire windows
-//
-

@@ -1,4 +1,4 @@
-package automationQA;
+package actions;
 
 import java.time.Duration;
 
