@@ -1,7 +1,6 @@
 package com.qa.pacifichunt;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -61,7 +60,7 @@ public class JSExecutors {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(baseUrl);
 
-		WebElement lastJob = driver.findElement(By.xpath("//a[.='Project management']"));
+		WebElement lastJob = driver.findElement(By.xpath("//a[@href='/jobs/70']"));
 		js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true)", lastJob);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
