@@ -5,8 +5,9 @@
     <classes>
       <class name="properties.ConfigurationTest">
         <methods>
+          <include name="loginAsJobSeekerWithSsAndExceptionHandling"/>
+          <include name="testConfig"/>
           <include name="closeBrowser"/>
-          <include name="loginAsEmployer"/>
         </methods>
       </class> <!-- properties.ConfigurationTest -->
     </classes>
