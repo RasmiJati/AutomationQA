@@ -27,8 +27,7 @@ public class ConfigurationTest {
 	public void testConfig() {
 		prop = new Properties();
 		try {
-			// relative path / dynamic path --> look for project not directory
-			// take input as package
+			// relative path / dynamic path --> look for project in package not directory
 			FileInputStream input = new FileInputStream("./src/test/java/properties/configuration.properties");
 
 			prop.load(input); // load the file in properties
@@ -60,7 +59,8 @@ public class ConfigurationTest {
 		driver.get(prop.getProperty("baseurl"));
 	}
 
-	@Test(enabled = true)
+	// login as employer
+	@Test(enabled = false)
 	public void loginAsEmployer() {
 
 		driver.findElement(By.xpath("//button[text()='Login']")).click();
@@ -77,12 +77,35 @@ public class ConfigurationTest {
 		Assert.assertEquals(actualText, "Dashboard");
 	}
 
+	// login as Job Seeker
+	@Test(enabled = true)
+	public void loginAsJobSeeker() {
+		driver.findElement(By.xpath("//button[text()='Login']")).click();
+
+		driver.findElement(By.name("email")).sendKeys(getJobSeekerEmail());
+
+		driver.findElement(By.name("password")).sendKeys(getJobSeekerPassword());
+
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+		String actualText = driver.findElement(By.xpath("//li[text()='Dashboard']")).getText();
+		Assert.assertEquals(actualText, "Dashboard");
+	}
+
 	public String getEmail() {
 		return prop.getProperty("email");
 	}
 
 	public String getPassword() {
 		return prop.getProperty("password");
+	}
+
+	public String getJobSeekerEmail() {
+		return prop.getProperty("loginemail");
+	}
+
+	public String getJobSeekerPassword() {
+		return prop.getProperty("loginpassword");
 	}
 
 	@AfterMethod
