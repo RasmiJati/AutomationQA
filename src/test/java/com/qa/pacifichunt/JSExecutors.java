@@ -65,7 +65,9 @@ public class JSExecutors {
 		js.executeScript("arguments[0].scrollIntoView(true)", lastJob);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.elementToBeClickable(lastJob));
+		System.out.println(lastJob.getText());
 		lastJob.click();
+		
 
 	}
 

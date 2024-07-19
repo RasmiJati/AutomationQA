@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-17T17:34:25 NPT" name="Default suite" finished-at="2024-07-17T17:34:41 NPT" duration-ms="15982">
+  <suite started-at="2024-07-19T08:18:26 NPT" name="Default suite" finished-at="2024-07-19T08:18:34 NPT" duration-ms="8771">
     <groups>
     </groups>
-    <test started-at="2024-07-17T17:34:25 NPT" name="Default test" finished-at="2024-07-17T17:34:41 NPT" duration-ms="15982">
-      <class name="windowhandles.LoginAsGmail">
-        <test-method signature="loginAsApple()[pri:0, instance:windowhandles.LoginAsGmail@d9345cd]" started-at="2024-07-17T17:34:25 NPT" name="loginAsApple" finished-at="2024-07-17T17:34:38 NPT" duration-ms="13411" status="PASS">
+    <test started-at="2024-07-19T08:18:26 NPT" name="Default test" finished-at="2024-07-19T08:18:34 NPT" duration-ms="8771">
+      <class name="properties.ConfigurationTest">
+        <test-method is-config="true" signature="testConfig()[pri:0, instance:properties.ConfigurationTest@49049a04]" started-at="2024-07-19T08:18:26 NPT" name="testConfig" finished-at="2024-07-19T08:18:30 NPT" duration-ms="4472" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAsApple -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:windowhandles.LoginAsGmail@d9345cd]" started-at="2024-07-17T17:34:38 NPT" name="closeBrowser" finished-at="2024-07-17T17:34:41 NPT" duration-ms="2524" status="PASS">
+        </test-method> <!-- testConfig -->
+        <test-method signature="loginAsEmployer()[pri:0, instance:properties.ConfigurationTest@49049a04]" started-at="2024-07-19T08:18:30 NPT" name="loginAsEmployer" finished-at="2024-07-19T08:18:32 NPT" duration-ms="1912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsEmployer -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:properties.ConfigurationTest@49049a04]" started-at="2024-07-19T08:18:32 NPT" name="closeBrowser" finished-at="2024-07-19T08:18:34 NPT" duration-ms="2338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- windowhandles.LoginAsGmail -->
+      </class> <!-- properties.ConfigurationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
